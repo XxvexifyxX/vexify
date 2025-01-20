@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="A brief description of your website.">
+<meta name="keywords" content="relevant, keywords, for, your, website">
+<meta name="author" content="Your Name">
+<meta name="robots" content="index, follow">
+<title>Your Website Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neo Egoist League - Standings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            background-color: #2a2a2a;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 15px;
+            text-align: center;
+        }
+        th {
+            background-color: #3a3a3a;
+        }
+        tr:nth-child(even) {
+            background-color: #2f2f2f;
+        }
+        tr:nth-child(odd) {
+            background-color: #252525;
+        }
+        input[type="number"], input[type="text"] {
+            background-color: transparent;
+            color: white;
+            border: none;
+            width: 60px;
+            text-align: center;
+        }
+        input[readonly] {
+            pointer-events: none;
+        }
+        .login-container {
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function enableEditing() {
+            const password = prompt("Enter admin password:");
+            if (password === "admin123") {
+                document.querySelectorAll('input').forEach(input => {
+                    input.removeAttribute('readonly');
+                });
+                alert("Editing enabled.");
+            } else {
+                alert("Incorrect password.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Neo Egoist League - Standings</h1>
+        <button onclick="enableEditing()">Login as Admin</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Plaats</th>
+                    <th>Deelnemer</th>
+                    <th>Match W-L-T</th>
+                    <th>Score</th>
+                    <th>TB</th>
+                    <th>Pts Diff</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>LA Galaxy</td>
+                    <td><input type="text" id="wlt1" value="0 - 0 - 0" readonly></td>
+                    <td><input type="number" id="score1" value="0" readonly></td>
+                    <td><input type="number" id="tb1" value="0" readonly></td>
+                    <td><input type="number" id="diff1" value="0" readonly></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Boca Juniors</td>
+                    <td><input type="text" id="wlt2" value="0 - 0 - 0" readonly></td>
+                    <td><input type="number" id="score2" value="0" readonly></td>
+                    <td><input type="number" id="tb2" value="0" readonly></td>
+                    <td><input type="number" id="diff2" value="0" readonly></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Bastard Munchen</td>
+                    <td><input type="text" id="wlt3" value="0 - 0 - 0" readonly></td>
+                    <td><input type="number" id="score3" value="0" readonly></td>
+                    <td><input type="number" id="tb3" value="0" readonly></td>
+                    <td><input type="number" id="diff3" value="0" readonly></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>PXG</td>
+                    <td><input type="text" id="wlt4" value="0 - 0 - 0" readonly></td>
+                    <td><input type="number" id="score4" value="0" readonly></td>
+                    <td><input type="number" id="tb4" value="0" readonly></td>
+                    <td><input type="number" id="diff4" value="0" readonly></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Ubers</td>
+                    <td><input type="text" id="wlt5" value="0 - 0 - 0" readonly></td>
+                    <td><input type="number" id="score5" value="0" readonly></td>
+                    <td><input type="number" id="tb5" value="0" readonly></td>
+                    <td><input type="number" id="diff5" value="0" readonly></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>FC Barcha</td>
+                    <td><input type="text" id="wlt6" value="0 - 0 - 0" readonly></td>
+                    <td><input type="number" id="score6" value="0" readonly></td>
+                    <td><input type="number" id="tb6" value="0" readonly></td>
+                    <td><input type="number" id="diff6" value="0" readonly></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Manshine City</td>
+                    <td><input type="text" id="wlt7" value="0 - 0 - 0" readonly></td>
+                    <td><input type="number" id="score7" value="0" readonly></td>
+                    <td><input type="number" id="tb7" value="0" readonly></td>
+                    <td><input type="number" id="diff7" value="0" readonly></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>FC Enyimba</td>
+                    <td><input type="text" id="wlt8" value="0 - 0 - 0" readonly></td>
+                    <td><input type="number" id="score8" value="0" readonly></td>
+                    <td><input type="number" id="tb8" value="0" readonly></td>
+                    <td><input type="number" id="diff8" value="0" readonly></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy Website URL</title>
+</head>
+<body>
+    <h1>Copy and Share the Website URL</h1>
+    <p>Click the button below to copy the current website's URL:</p>
+    <button id="copyButton">Copy URL</button>
+    <p id="status" style="color: green; margin-top: 10px;"></p>
+
+    <script>
+        document.getElementById('copyButton').addEventListener('click', () => {
+            // Get the current URL of the website
+            const currentUrl = window.location.href;
+
+            // Create a temporary input to copy the URL
+            const tempInput = document.createElement('input');
+            tempInput.value = currentUrl;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            // Show a confirmation message
+            document.getElementById('status').textContent = "URL copied to clipboard!";
+        });
+    </script>
+</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEL LEAGUE</title>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <p>Click the link below to visit my website:</p>
+    <a href="file:///C:/Users/firas/OneDrive/Desktop/vs%20code/leaugue/index.html" target="_blank">Go to My Website</a>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A brief description of your website.">
+    <meta name="keywords" content="relevant, keywords, for, your, site">
+    <meta name="author" content="Your Name or Company">
+    <title>Your Website Title</title>
+</head>
+<body>
+    <h1>Welcome to My Website</h1>
+    <p>This is the home of my awesome content!</p>
+</body>
+</html>
